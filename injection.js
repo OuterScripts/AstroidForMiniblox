@@ -71,8 +71,8 @@ function modifyCode(text) {
 	addReplacement('this.gltfManager.loadModels()', ',this.loadVape()');
 	addReplacement('ShaderManager.addShaderToMaterialWorld(this.materialTransparentWorld)}', `
 		async loadVape() {
-			this.vapeTexture = await this.loader.loadAsync("https://raw.githubusercontent.com/7GrandDadPGN/VapeForMiniblox/main/assets/logo.png");
-			this.v4Texture = await this.loader.loadAsync("https://raw.githubusercontent.com/7GrandDadPGN/VapeForMiniblox/main/assets/logov4.png");
+			this.vapeTexture = await this.loader.loadAsync("https://raw.githubusercontent.com/OuterScripts/AstroidForMiniblox/main/assets/logo.png");
+			this.v4Texture = await this.loader.loadAsync("https://raw.githubusercontent.com/OuterScripts/AstroidForMiniblox/main/assets/logov4.png");
 		}
 	`);
 
@@ -375,7 +375,7 @@ function modifyCode(text) {
 		}
 		else if (str.startsWith(".modules"))
 		{
-			let str = "Module List\\n";
+			let str = "Astroid Module List\\n";
 			for(const [name, module] of Object.entries(modules)) str += "\\n" + name;
 			game$1.chat.addChat({text: str});
 			return;
@@ -968,7 +968,7 @@ function modifyCode(text) {
 			antiban.toggle();
 			new Module("AutoRejoin", function() {});
 			const chatdisabler = new Module("ChatDisabler", function() {});
-			chatdisablermsg = chatdisabler.addoption("Message", String, "xzxkw is black");
+			chatdisablermsg = chatdisabler.addoption("Message", String, "air is nice :D");
 			new Module("FilterBypass", function() {});
 
 			const survival = new Module("SurvivalMode", function(callback) {
